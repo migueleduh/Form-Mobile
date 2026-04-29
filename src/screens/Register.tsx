@@ -1,4 +1,4 @@
-import {View, Text, StyleSheet} from "react-native";
+import {View, Text, StyleSheet, Image} from "react-native";
 import { use, useEffect, useState } from "react";
 import linearGradient, { LinearGradient } from "expo-linear-gradient";
 
@@ -14,9 +14,11 @@ export default function Register(){
         }, 2000);
     } , [])
 
+    
+
     if(loading){
         return <LinearGradient colors={["#5C6DFF","#961CFB"]} style={styles.loading}>
-
+                    <Image source={require("../../assets/images/branco.png")} style={{width:250, height:250}}/>
                     <Text style={styles.textLoading}>Sistema Carregando...</Text>
                </LinearGradient>
     }
